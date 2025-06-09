@@ -3,7 +3,7 @@
 ## Overview
 Daily Session Saver is a Firefox extension designed to automatically save your browser sessions on a daily basis. It allows you to easily restore previous browsing sessions, providing a convenient way to manage and revisit your daily web activities.
 
-![Ekran görüntüsü 2025-06-09 095552](https://github.com/user-attachments/assets/052f0bfd-f14d-4397-b78c-2cf60db6f143)
+![Ekran görüntüsü 2025-06-09 163446](https://github.com/user-attachments/assets/85f13b65-4a6d-4f96-a788-967fba79937f)
 
 ## Features
 - **Automated Daily Backups**: Captures all open tabs in your browser each day.
