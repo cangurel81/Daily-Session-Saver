@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+  width: 300px;
+}
+
+h1 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.session-item {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.session-item:hover {
+  background-color: #f0f0f0;
+}
+
+.session-item:last-child {
+  border-bottom: none;
+}
