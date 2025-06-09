@@ -1,23 +1,292 @@
 body {
   font-family: sans-serif;
   width: 300px;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-h1 {
+body.dark-mode {
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+header {
+  display: block; /* Change to block to stack elements */
+  text-align: center; /* Center the title */
+  margin-bottom: 15px;
+}
+
+header h1 {
+  margin-bottom: 20px; /* Increased space between title and buttons */
+}
+
+header h1 {
   font-size: 1.2em;
+  margin: 0;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  align-items: center;
+  gap: 10px; /* Adjusted gap for three items */
+}
+
+h2 {
+  font-size: 1em;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
-.session-item {
-  padding: 8px;
-  border-bottom: 1px solid #eee;
+#save-current-session-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
   cursor: pointer;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+
+#save-current-session-button:hover {
+  background-color: #0056b3;
+}
+
+body.dark-mode #save-current-session-button {
+  background-color: #007bff;
+}
+
+body.dark-mode #save-current-session-button:hover {
+  background-color: #4488ee;
+}
+
+.session-item {
+  background-color: var(--background-color-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
 }
 
 .session-item:hover {
-  background-color: #f0f0f0;
+  background-color: var(--hover-color);
 }
 
-.session-item:last-child {
-  border-bottom: none;
+.session-item h3 {
+  margin: 0;
+  font-size: 0.85em;
+  color: var(--text-color);
+  flex-grow: 1;
+}
+
+.session-item p {
+  margin: 0;
+  font-size: 0.85em;
+  color: var(--text-color-secondary);
+  white-space: nowrap;
+}
+
+.session-checkbox {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "\2600"; /* Sun icon */
+  font-size: 14px;
+  color: #f39c12; /* Sun color */
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.slider:after {
+  position: absolute;
+  content: "\1F319"; /* Moon icon */
+  font-size: 14px;
+  color: #f1c40f; /* Moon color */
+  height: 16px;
+  width: 16px;
+  right: 4px;
+  bottom: 4px;
+  background-color: transparent;
+  -webkit-transition: .4s;
+  transition: .4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  border-radius: 50%;
+}
+
+.auto-save-text {
+  margin-left: 5px; /* Space between checkbox and text */
+  font-size: 0.9em;
+  color: var(--text-color);
+}
+
+.auto-save-checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+input:checked + .slider:before {
+  opacity: 0;
+}
+
+input:checked + .slider:after {
+  opacity: 1;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+  content: "\2600"; /* Sun icon */
+  color: #f39c12; /* Sun color */
+  background-color: white; /* Light background for sun */
+}
+
+input:checked + .slider:after {
+  content: "\1F319"; /* Moon icon */
+  color: #f1c40f; /* Moon color */
+  background-color: transparent; /* Dark background for moon */
+  border-radius: 50%;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#open-tabs-count {
+  font-size: 0.9em;
+  color: var(--text-color-secondary);
+  white-space: nowrap;
+}
+
+.session-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.session-actions button {
+  background-color: var(--button-background);
+  color: var(--button-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s ease;
+}
+
+.session-actions button:hover {
+  background-color: var(--button-hover-background);
+}
+
+#export-button,
+#import-button {
+  background-color: #007bff;
+  color: white;
+}
+
+#export-button:hover,
+#import-button:hover {
+  background-color: #0056b3;
+}
+
+body.dark-mode #export-button,
+body.dark-mode #import-button {
+  background-color: #007bff;
+}
+
+body.dark-mode #export-button:hover,
+body.dark-mode #import-button:hover {
+  background-color: #4488ee;
+}
+
+#delete-selected-sessions-button {
+  background-color: #dc3545; /* Red color for delete button */
+  color: white;
+}
+
+#delete-selected-sessions-button:hover {
+  background-color: #c82333;
+}
+
+body.dark-mode #delete-selected-sessions-button {
+  background-color: #c82333;
+}
+
+body.dark-mode #delete-selected-sessions-button:hover {
+  background-color: #ef5350;
+}
+
+#current-tabs-count {
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
 }

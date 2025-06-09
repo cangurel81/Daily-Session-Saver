@@ -6,8 +6,29 @@
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <h1>Saved Sessions</h1>
+  <header>
+    <h1>Daily Session Saver</h1>
+    <div class="header-buttons">
+      <label class="auto-save-checkbox-label">
+        <input type="checkbox" id="auto-save-switch">
+        <span class="auto-save-text">Auto Save</span>
+      </label>
+      <div id="open-tabs-count"></div>
+      <label class="switch">
+        <input type="checkbox" id="theme-switch">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </header>
+  <h2>Saved Sessions</h2>
   <div id="session-list"></div>
+  <div class="session-actions">
+    <button id="export-button">Export Sessions</button>
+    <input type="file" id="import-file-input" accept=".json" style="display: none;">
+    <button id="import-button">Import Sessions</button>
+    <button id="delete-selected-sessions-button">Delete Selected</button>
+    <button id="save-current-session-button">Save Current Session</button>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>
