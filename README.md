@@ -14,7 +14,6 @@ Daily Session Saver is a Firefox extension designed to automatically save your b
 - **User-Friendly Interface**: View a list of saved sessions organized by date in a popup.
 - **Easy Restoration**: Click on a specific date to restore that day's session, reopening all tabs active at the time of saving.
 - **Local Storage**: Utilizes Firefox's `browser.storage.local` API for secure and persistent storage of session data, available even after browser restarts.
-- **Future Potential**: Plans for cloud synchronization to enable cross-device access.
 
 ## Use Case
 This extension is ideal for users who:
@@ -62,3 +61,16 @@ Contributions are welcome! To contribute:
 ## License
 
 This project is licensed under the **GNU General Public License v3.0** — see the [LICENSE](LICENSE) file for details.
+
+## 🇹🇷 Türkçe
+
+**Daily Session Saver**, Firefox oturumlarınızı her gün otomatik olarak yedekleyen bir eklentidir.
+O gün açık olan tüm sekmeler kaydedilir; popup'tan tarih seçip o günün oturumunu tek tıkla geri
+yükleyebilirsiniz.
+
+- **Kurulum (önerilen):** [addons.mozilla.org — Daily Session Saver](https://addons.mozilla.org/en-US/firefox/addon/daily-session-saver/) → **Add to Firefox**.
+- **Kaynaktan yükleme:** `about:debugging#/runtime/this-firefox` → **Load Temporary Add-on…** → `manifest.json`.
+  Geçici eklentiler Firefox kapanınca silinir.
+- **Depo sürümü:** Mağazadaki **v1.1** ile aynı kod ve aynı `gecko.id` — kaynaktan yüklediğinizde mağaza sürümü gibi davranır.
+- **Gizlilik:** Tüm veri `browser.storage.local` içinde, kendi cihazınızda kalır. Hiçbir veri dışarı gönderilmez.
+- **Lisans:** GPL-3.0.

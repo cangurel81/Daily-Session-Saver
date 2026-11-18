@@ -1,0 +1,16 @@
+# Paketleme çıktısı
+*.xpi
+web-ext-artifacts/
+dist/
+
+# Editör / işletim sistemi
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Geçici dosyalar
+*.log
+*.tmp
+*.bak
