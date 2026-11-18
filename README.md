@@ -1,5 +1,9 @@
 # Daily Session Saver
 
+![Firefox](https://img.shields.io/badge/Firefox-109%2B-orange?style=flat&logo=firefox)
+![Version](https://img.shields.io/amo/v/daily-session-saver?style=flat&label=addons.mozilla.org)
+![License](https://img.shields.io/badge/license-GPL--3.0-green?style=flat)
+
 ## Overview
 Daily Session Saver is a Firefox extension designed to automatically save your browser sessions on a daily basis. It allows you to easily restore previous browsing sessions, providing a convenient way to manage and revisit your daily web activities.
 
@@ -19,9 +23,23 @@ This extension is ideal for users who:
 - Want enhanced session management beyond Firefox's built-in capabilities.
 
 ## Installation
-1. Download the extension from the Firefox Add-ons store (link to be added).
-2. Click "Add to Firefox" and follow the prompts to install.
+
+### From Mozilla Add-ons (recommended)
+
+[![Get the Add-on](https://img.shields.io/badge/Firefox%20Add--ons-Daily%20Session%20Saver-ff7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white)](https://addons.mozilla.org/en-US/firefox/addon/daily-session-saver/)
+
+1. Open the [Daily Session Saver page on addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/daily-session-saver/).
+2. Click **Add to Firefox** and confirm the prompt.
 3. The extension will automatically start saving your daily sessions.
+
+### From source (temporary / development)
+
+1. Clone or download this repository.
+2. Open `about:debugging#/runtime/this-firefox` in Firefox.
+3. Click **Load Temporary Add-on…** and select `manifest.json`.
+4. The extension loads immediately — note that temporary add-ons are removed when Firefox restarts.
+
+> This repository tracks the published **v1.1** build: same code and the same `browser_specific_settings.gecko.id`, so loading it from source behaves like the store version.
 
 ## Usage
 - **Saving Sessions**: The extension automatically saves all open tabs daily.
@@ -40,3 +58,7 @@ Contributions are welcome! To contribute:
 3. Make your changes and commit: `git commit -m "Add your feature"`
 4. Push to the branch: `git push origin feature/your-feature-name`
 5. Open a pull request.
+
+## License
+
+This project is licensed under the **GNU General Public License v3.0** — see the [LICENSE](LICENSE) file for details.
