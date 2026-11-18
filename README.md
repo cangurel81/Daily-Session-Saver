@@ -31,6 +31,8 @@ This extension is ideal for users who:
 2. Click **Add to Firefox** and confirm the prompt.
 3. The extension will automatically start saving your daily sessions.
 
+> **Direct file:** [`daily-session-saver-1.1.xpi`](https://github.com/cangurel81/Daily-Session-Saver/releases/latest/download/daily-session-saver-1.1.xpi) — the unsigned build attached to the release. Firefox only loads it temporarily (`about:debugging` → **Load Temporary Add-on…** → pick the `.xpi`); a permanent install has to come from addons.mozilla.org.
+
 ### From source (temporary / development)
 
 1. Clone or download this repository.
@@ -69,6 +71,7 @@ O gün açık olan tüm sekmeler kaydedilir; popup'tan tarih seçip o günün ot
 yükleyebilirsiniz.
 
 - **Kurulum (önerilen):** [addons.mozilla.org — Daily Session Saver](https://addons.mozilla.org/en-US/firefox/addon/daily-session-saver/) → **Add to Firefox**.
+- **Doğrudan dosya:** [`.xpi` sürümü](https://github.com/cangurel81/Daily-Session-Saver/releases/latest/download/daily-session-saver-1.1.xpi) — imzasız derleme; Firefox yalnızca geçici yükler (`about:debugging`).
 - **Kaynaktan yükleme:** `about:debugging#/runtime/this-firefox` → **Load Temporary Add-on…** → `manifest.json`.
   Geçici eklentiler Firefox kapanınca silinir.
 - **Depo sürümü:** Mağazadaki **v1.1** ile aynı kod ve aynı `gecko.id` — kaynaktan yüklediğinizde mağaza sürümü gibi davranır.
